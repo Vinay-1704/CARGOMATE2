@@ -1,0 +1,292 @@
+.earnings-container {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.earnings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.earnings-header h1 {
+  color: #fff;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.refresh-btn {
+  padding: 10px 20px;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+}
+
+.refresh-btn:hover {
+  background: #333;
+  border-color: #4CAF50;
+}
+
+/* Stats Grid */
+.earnings-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.earnings-stat-card {
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #333;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.earnings-stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.earnings-stat-card .stat-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+}
+
+.earnings-stat-card.green .stat-icon {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4CAF50;
+}
+
+.earnings-stat-card.blue .stat-icon {
+  background: rgba(33, 150, 243, 0.2);
+  color: #2196F3;
+}
+
+.earnings-stat-card.orange .stat-icon {
+  background: rgba(255, 152, 0, 0.2);
+  color: #FF9800;
+}
+
+.earnings-stat-card.purple .stat-icon {
+  background: rgba(156, 39, 176, 0.2);
+  color: #9C27B0;
+}
+
+.stat-content .stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.stat-content .stat-label {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Filter Tabs */
+.earnings-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 0;
+}
+
+.filter-btn {
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s;
+}
+
+.filter-btn:hover {
+  color: #4CAF50;
+}
+
+.filter-btn.active {
+  color: #4CAF50;
+  border-bottom-color: #4CAF50;
+  font-weight: bold;
+}
+
+/* Table */
+.earnings-table-container {
+  background: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #333;
+}
+
+.earnings-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.earnings-table thead {
+  background: #2a2a2a;
+}
+
+.earnings-table th {
+  padding: 18px 15px;
+  text-align: left;
+  color: #ccc;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.earnings-table tbody tr {
+  border-bottom: 1px solid #333;
+  transition: background 0.2s;
+}
+
+.earnings-table tbody tr:hover {
+  background: #2a2a2a;
+}
+
+.earnings-table td {
+  padding: 20px 15px;
+  color: #ccc;
+}
+
+.trip-id {
+  color: #4CAF50 !important;
+  font-weight: bold;
+}
+
+.route-cell {
+  line-height: 1.8;
+}
+
+.route-from, .route-to {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.from-icon {
+  color: #4CAF50;
+}
+
+.to-icon {
+  color: #f44336;
+}
+
+.amount-cell {
+  color: #4CAF50 !important;
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-badge.paid {
+  background: #4CAF50;
+  color: #fff;
+}
+
+.status-badge.pending {
+  background: #FF9800;
+  color: #fff;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+  color: #888;
+}
+
+.empty-state i {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.empty-state h3 {
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+/* Loading State */
+.earnings-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: #888;
+}
+
+.earnings-loading i {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #4CAF50;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .earnings-table-container {
+    overflow-x: auto;
+  }
+  
+  .earnings-table {
+    min-width: 900px;
+  }
+}
+
+@media (max-width: 768px) {
+  .earnings-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .earnings-filters {
+    flex-wrap: wrap;
+  }
+  
+  .earnings-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
